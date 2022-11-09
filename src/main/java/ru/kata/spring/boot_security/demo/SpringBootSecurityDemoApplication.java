@@ -11,12 +11,6 @@ import ru.kata.spring.boot_security.demo.service.UserServiceImpl;
 
 @SpringBootApplication
 public class SpringBootSecurityDemoApplication {
-
-	@Bean
-	public PasswordEncoder passwordEncoder() {
-		return new BCryptPasswordEncoder();
-	}
-
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootSecurityDemoApplication.class, args);
 	}
