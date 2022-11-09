@@ -5,7 +5,6 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
-
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
@@ -38,10 +37,13 @@ public class User implements UserDetails {
     public void addRole(Role role) {
         if (this.roles == null) {
             this.roles = new HashSet<>();
-        } this.roles.add(role);
+        }
+        this.roles.add(role);
     }
 
-    public User() {}
+    public User() {
+    }
+
     public User(String name, String lastName, Integer age) {
         this.username = name;
         this.lastName = lastName;
